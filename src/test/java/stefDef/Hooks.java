@@ -15,7 +15,7 @@ public class Hooks {
     @Before
     public void openBrowser() throws IOException {
         System.out.println("opening browser");
-        System.setProperty("webdriver.chrome.driver", "C:/WebDrivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://cartaxcheck.co.uk/");
         driver.manage().window().maximize();
