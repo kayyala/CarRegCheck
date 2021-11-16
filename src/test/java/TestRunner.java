@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
         glue = {"stefDef"},
         plugin = { "pretty","json:target/cucumber-report/cucumber.json", "html:target/cucumber-report/cucumber.html" },
         tags = "@Sanity"
-        )
+)
 public class TestRunner {
 }
