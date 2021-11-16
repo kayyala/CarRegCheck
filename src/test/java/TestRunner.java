@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/Features/CarRegistrationcheck.feature"},
         glue = {"stefDef"},
-        plugin = { "pretty", "html:target/cucumber-reports" },
+        plugin = { "pretty","json:target/cucumber-report/cucumber.json", "html:target/cucumber-report/cucumber.html" },
         tags = "@Sanity"
         )
 public class TestRunner {

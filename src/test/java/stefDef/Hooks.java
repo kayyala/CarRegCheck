@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,7 +17,14 @@ public class Hooks {
     public void openBrowser() throws IOException {
         System.out.println("opening browser");
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.addArguments("--disable-logging");
+        chromeOptions.addArguments("--log-level=3");
+        chromeOptions.addArguments("--output=/dev/null");
+        driver = new ChromeDriver(chromeOptions);
         driver.get("https://cartaxcheck.co.uk/");
         driver.manage().window().maximize();
     }
