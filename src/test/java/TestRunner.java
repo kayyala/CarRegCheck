@@ -1,7 +1,6 @@
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-//C:\Users\sudhakarkayyala\Documents\Automationworkspace\CarValidation\src\test\resources\Features\CarRegistrationcheck.feature
 
 @RunWith(Cucumber.class)
 @CucumberOptions(

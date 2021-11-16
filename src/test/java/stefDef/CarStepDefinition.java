@@ -80,13 +80,10 @@ public class CarStepDefinition extends Hooks {
         values.add(driver.findElement(By.xpath("//*[@id='m']/div[2]/div[5]/div[1]/div/span/div[2]/dl[4]/dd")).getText());
         Thread.sleep(2000);
         values.add(driver.findElement(By.xpath("//*[@id='m']/div[2]/div[5]/div[1]/div/span/div[2]/dl[5]/dd")).getText());
-        //System.out.println("values "+values.toString());
         actualVehicleDetails.put(reg, values);
         isVehicleDetailsFound = true;
-        //System.out.println(""+ actualVehicleDetails.toString());
         homepage.closeBrowser();
     }
-
     private void readVehicleDetailsFromOutputFile() throws Exception {
         BufferedReader in = new BufferedReader(new FileReader("src/test/java/stefDef/car_output.txt"));
         String line;
@@ -101,7 +98,6 @@ public class CarStepDefinition extends Hooks {
             expectedVehicleDetails.put(key, values);
         }
         in.close();
-        //System.out.println("expected vehicle detials "+expectedVehicleDetails);
     }
 
 }

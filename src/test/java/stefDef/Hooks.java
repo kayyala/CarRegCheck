@@ -20,11 +20,6 @@ public class Hooks {
         driver.get("https://cartaxcheck.co.uk/");
         driver.manage().window().maximize();
     }
-//     System.setProperty("webdriver.chrome.driver","C:/WebDrivers/chromedriver.exe");
-//    driver= new ChromeDriver();
-//        driver.get("https://www.amazon.in/");
-//        driver.manage().window().maximize();
-
 
     @After
     public  void closeBrowser()
